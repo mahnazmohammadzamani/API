@@ -16,4 +16,18 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(API)
+library(readxl)
+library(httr)
+library(RCurl)
+library(readxl)
+```
+
+```{r setup}
+url <- "https://data.val.se/val/val2014/statistik/2014_landstingsval_per_kommun.xls"
+GET(url, write_disk(tf <- tempfile(fileext = ".xls")))
+df1 <- read_excel(tf, 1L)
+df1 <- df1[-1,]
+names(df1) <- as.matrix(df1[1, ])
+df1 <- df1[-1, ]
+list(df1, nrow(df1), ncol(df1))
 ```

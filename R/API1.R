@@ -3,7 +3,6 @@ library(httr)
 library(RCurl)
 library(readxl)
 read_data <- function(url){
-  #url <- "https://data.val.se/val/val2014/statistik/index.html"
   GET(url, write_disk(tf <- tempfile(fileext = ".xls")))
   df1 <- read_excel(tf, 1L)
   df1 <- df1[-1,]
@@ -13,3 +12,4 @@ read_data <- function(url){
   return(output)
 }
 read_data("https://data.val.se/val/val2014/statistik/2014_landstingsval_per_kommun.xls")
+
