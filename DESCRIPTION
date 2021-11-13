@@ -2,8 +2,8 @@ Package: API
 Type: Package
 Title: Crime in US
 Version: 0.1.0
-Author: Mahnaz MOhammadzamani
-Maintainer: Mahnaz Mohammadzamani
+Author: Mahnaz MOhammadzamani<mahnaz.mzamani@gmail.com>
+Maintainer: Mahnaz Mohammadzamani<mahnaz.mzamani@gmail.com>
 Description: Rate of crime in US on OpenStreetMaps
 License: GPL-2
 Encoding: UTF-8
